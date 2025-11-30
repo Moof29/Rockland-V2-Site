@@ -1,0 +1,9 @@
+import MenuGrid from '../../components/MenuGrid';
+
+export default function MenuPage() {
+    return (
+        <main>
+            <MenuGrid />
+        </main>
+    );
+}

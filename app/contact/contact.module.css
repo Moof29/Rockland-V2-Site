@@ -1,0 +1,148 @@
+.contactPage {
+    min-height: 100vh;
+}
+
+.hero {
+    position: relative;
+    color: white;
+    padding: 8rem 0 6rem;
+    text-align: center;
+    overflow: hidden;
+}
+
+.heroImageWrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.heroImage {
+    object-fit: cover;
+}
+
+.heroOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.heroTitle {
+    position: relative;
+    z-index: 2;
+    font-size: 3rem;
+    margin-bottom: var(--spacing-md);
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.heroSubtitle {
+    position: relative;
+    z-index: 2;
+    font-size: 1.5rem;
+    opacity: 0.95;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.contactGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+}
+
+.sectionTitle {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-lg);
+}
+
+.contactInfo {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.infoCard {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+    background: var(--color-surface);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.infoCard:hover {
+    transform: translateX(5px);
+    box-shadow: var(--shadow-md);
+}
+
+.infoIcon {
+    font-size: 2.5rem;
+    flex-shrink: 0;
+}
+
+.infoContent h3 {
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-xs);
+    font-size: 1.3rem;
+}
+
+.infoContent p {
+    color: var(--color-text-main);
+    line-height: 1.6;
+}
+
+.socialLink {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color var(--transition-fast);
+}
+
+.socialLink:hover {
+    color: var(--color-accent);
+}
+
+.mapPlaceholder {
+    background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-secondary) 100%);
+    border-radius: var(--radius-lg);
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-xl);
+}
+
+.mapContent {
+    text-align: center;
+}
+
+.mapText {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.mapDesc {
+    font-size: 1.2rem;
+    color: var(--color-text-muted);
+}
+
+@media (min-width: 768px) {
+    .heroTitle {
+        font-size: 4rem;
+    }
+
+    .contactGrid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
